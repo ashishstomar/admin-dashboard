@@ -1,85 +1,136 @@
+@font-face {
+    font-family: 'poppins';
+    src: url(public/fonts/Poppins-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url(public/fonts/Poppins-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url(public/fonts/Poppins-ExtraBold.ttf);
+    font-weight: 800;
+}
 * {
     text-decoration: none;
     list-style-type: none;
- 
 }
 
 body {
     margin: 0;
-    background-color: #fefefe;
+    background-color: #e3e1e1;
     display: grid;
     grid-template-columns: 1fr 4fr; 
     grid-template-rows: 1fr 5fr;
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+
 }
 
 .sidebar {
-    outline: 2px solid red;
     grid-column: 1 / 2;
-    grid-row: 1 / -1
+    grid-row: 1 / -1;
+    background: #ffee82;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 30px;
+
+}
+
+.sidebar > span {
+    font-size: 35px;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+.sidebar ul {
+    margin-top: 60px;
+    padding: 0;
+    display: grid;
+    gap: 15px;
+    justify-content: start;
+}
+
+.sidebar ul  i {
+    margin-right: 15px;
 }
 .mainContent {
     grid-row: 2 / 3;
+
     display: grid;
     grid-template-columns: 3fr 1fr;
-
+    grid-template-rows: 80px 2fr;
+    margin: 30px;
+    outline: 2px solid red;
 }
 
+.mainContent > h1 {
+    outline: 1px solid red;
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 1/2;
+}
 
 .mainContent > section {
-    outline: 2px solid red;
     border-radius: 8px;
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     gap: 30px;
-    margin: 15px;
+    grid-row: 2/3;
+    grid-column: 1/2;
 }
 
 .mainContent >section article {
-    background-color: #d7d7d7;
+    background-color: #f3f3f3;
     border-radius: 8px;
-    border-left: 10px solid yellow;
+    border-left: 10px solid #0336FF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.mainContent > aside {
-    outline: 2px solid rgb(234, 230, 230);
-    background-color: rgb(175, 170, 179);
+.rightSideContent {
     border-radius: 8px;
     display: grid;
-    grid-template-rows: 2fr 1fr;
-    gap: 30px;
+    grid-template-rows: 1fr 3fr 2fr 4fr;
+
 }
 
-.rightSideContent{
-    outline: 2px solid rgb(251, 105, 105);
-    background-color: rgb(128, 87, 161);
+.rightSideContent > h1 {
+    grid-row: 1/2;
+
+}
+.rightSideContent > article{
+    grid-row: 2/3;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+
+}
+.rightSideContent > h1:last-of-type{
+    grid-row: 3/4;
+}
+.rightSideContent > section {
+    grid-row: 4/5;
+    background-color: #f3f3f3;
     border-radius: 8px;
 }
 
 .header {
-    outline: 2px solid rgb(4, 0, 255);
+    background-color:#c0cdff;
     grid-column: 2 / -1 ;
 }
 
 #searchBar {
-    height: 20px;
+    height: 24px;
     width: 300px;
     border-radius: 20px;
     border: none;
 }
-
-.dashboard {
-    display: grid;
-}
-
-nav {
-    
-}
-
-aside {
-    background-color: rgb(170, 198, 254);
-}
-
-
 
 header > nav:nth-child(1) {
     display: flex;
@@ -103,3 +154,133 @@ header > nav:nth-child(2) > div {
     justify-content: space-between ;
     align-items: center;
 }
+
+
+.header-btn  {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.header-btn button {
+    background-color: #0336FF;
+    color: #f4f3f3;
+    border-radius: 20px;
+  
+    height: 40px;
+    width: 90px;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-dashboard {
+    display: inline-block;
+    width: 65px; 
+    height: 65px;
+    background-image: url('public/assets/view-dashboard-variant.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    border-radius: 20px;;
+}
+
+.icon-home {
+    display: inline-block;
+    width: 34px; 
+    height: 34px;
+    background-image: url('public/assets/home.svg');
+    vertical-align: middle;
+}
+
+.icon-profile {
+    display: inline-block;
+    width: 34px; 
+    height: 34px;
+    background-image: url('public/assets/card-account-details-outline.svg');
+    vertical-align: middle;
+}
+
+.icon-Messages {
+    display: inline-block;
+     width: 34px; 
+    height: 34px;
+    background-image: url('public/assets/message.svg');
+    vertical-align: middle;
+}
+.icon-History {
+    display: inline-block;
+     width: 34px; 
+    height: 34px;
+    background-image: url('public/assets/history.svg');
+    vertical-align: middle;
+}
+.icon-Tasks {
+    display: inline-block;
+     width: 34px; 
+    height: 34px;
+    background-image: url('public/assets/calendar-check.svg');
+    vertical-align: middle;
+}
+.icon-Communities {
+    display: inline-block;
+     width: 34px; 
+    height: 34px;
+    background-image: url('public/assets/google-circles-communities.svg');
+    vertical-align: middle;
+}
+.icon-Settings {
+    display: inline-block;
+     width: 34px; 
+    height: 34px;
+    background-image: url('public/assets/cog.svg');
+    vertical-align: middle;
+}
+.icon-Support {
+    display: inline-block;
+     width: 34px; 
+    height: 34px;
+    background-image: url('public/assets/face-agent.svg');
+    vertical-align: middle;
+}
+
+.icon-Privacy {
+    display: inline-block;
+     width: 34px; 
+    height: 34px;
+    background-image: url('public/assets/security.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.icon-bell {
+    display: inline-block;
+     width: 34px; 
+    height: 34px;
+    background-image: url('public/assets/bell-ring-outline.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.icon-DP {
+    display: inline-block;
+    width: 90px; 
+    height: 90px;
+    background-image: url('public/assets/avatar-bad-breaking-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+
+.icon-search {
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    background-image: url('public/assets/search-2-line.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
