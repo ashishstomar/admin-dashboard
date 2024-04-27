@@ -20,28 +20,27 @@
 
 body {
     margin: 0;
-    background-color: #e3e1e1;
+    background-color: #e7eaff;
     display: grid;
     grid-template-columns: 1fr 4fr; 
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
     font-family: 'poppins', sans-serif;
     font-weight: 400;
-
 }
 
 .sidebar {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     background: #ffee82;
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     font-size: 1.5rem;
     font-weight: 700;
     padding: 30px;
+    height: 100%;
 
 }
 
 .sidebar > span {
-    font-size: 35px;
+    font-size: 2.2rem;
     display: grid;
     grid-template-columns: 1fr 10fr;
     justify-content: center;
@@ -59,23 +58,21 @@ body {
 }
 
 .sidebar ul  i {
-    margin-right: 15px;
+    margin-right: 18px;
+}
+.sidebar ul li a {
+    color: rgba(0, 0, 0, 0.795);
 }
 .mainContent {
-    grid-row: 2 / 3;
-
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 80px 2fr;
-    margin: 30px;
-    outline: 2px solid red;
+    grid-template-rows: 68px 1fr;
+    margin: 10px 0px 0px 30px;
+    font-size: 0.9rem;
 }
 
-.mainContent > h1 {
-    outline: 1px solid red;
-    display: grid;
-    grid-column: 1 / 2;
-    grid-row: 1/2;
+.mainContent > h2 {
+    font-size: 1.5rem;
 }
 
 .mainContent > section {
@@ -84,58 +81,70 @@ body {
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     gap: 30px;
     grid-row: 2/3;
-    grid-column: 1/2;
 }
 
-.mainContent >section article {
+.mainContent > section > article {
     background-color: #f3f3f3;
     border-radius: 8px;
-    border-left: 10px solid #0336FF;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.rightSideContent {
-    border-radius: 8px;
+    border-left: 10px solid #FF0266;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
     display: grid;
-    grid-template-rows: 1fr 3fr 2fr 4fr;
-
+    grid-template-rows: 36px 3fr 1fr;
 }
 
-.rightSideContent > h1 {
-    grid-row: 1/2;
+.mainContent > section article > * {
+    margin: 0;
+}
 
-}
-.rightSideContent > article{
-    grid-row: 2/3;
-    background-color: #f3f3f3;
-    border-radius: 8px;
-
-}
-.rightSideContent > h1:last-of-type{
-    grid-row: 3/4;
-}
-.rightSideContent > section {
-    grid-row: 4/5;
-    background-color: #f3f3f3;
-    border-radius: 8px;
-}
 
 .header {
     background-color:#c0cdff;
     grid-column: 2 / -1 ;
+    margin: 0px;
+    padding: 0px 30px 0px 30px;
+    height: 215px;
 }
 
 #searchBar {
-    height: 24px;
-    width: 300px;
+    height: 40px;
+    width: 700px;
     border-radius: 20px;
     border: none;
+    background-color: #e7eaff;;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
 header > nav:nth-child(1) {
     display: flex;
-    justify-content: space-between ;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+}
+header > nav > form {
+    display: flex;
+    gap: 25px;
+}
+header > nav > ul {
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr;
+    gap: 25px;
+    align-items: center;
+}
+
+header > nav > ul > li {
+    text-align: center;
+    margin: auto
+}
+
+header > nav > ul > li > * {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
 }
 
 header > nav:nth-child(2) {
@@ -144,17 +153,26 @@ header > nav:nth-child(2) {
     align-items: center;
 } 
 
-header > nav > ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-}
-
 header > nav:nth-child(2) > div {
     display: flex;
     justify-content: space-between ;
     align-items: center;
+    gap: 20px;
+
 }
 
+header > nav:nth-child(2) > div > span > *{
+    margin: 0px;
+}
+
+header > nav:nth-child(2) > div > span > p {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+header > nav:nth-child(2) > div > span > h1 {
+    font-size: 1.5rem;
+}
 
 .header-btn  {
     display: flex;
@@ -163,15 +181,86 @@ header > nav:nth-child(2) > div {
 }
 
 .header-btn button {
-    background-color: #0336FF;
+    background-color: #1F51FF;
     color: #f4f3f3;
-    border-radius: 20px;
-  
-    height: 40px;
-    width: 90px;
+    border-radius: 53px;
+    font-weight: 600;
+    height: 48px;
+    width: 120px;
     border: none;
     cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+.rightSideContent {
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 68px 1fr 68px 1fr;
+    margin: 0px 30px 0px 30px;
+    width: 350px;
+}
+
+.rightSideContent > h2 {
+    grid-row: 1/2;
+    font-size: 1.5rem;
+}
+
+.rightSideContent > article {
+    grid-row: 2/3;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    padding: 10px 30px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    
+}
+.rightSideContent div h2  {
+    font-size: 0.9rem;
+}
+
+.rightSideContent div p  {
+    font-size: 0.8rem;
+}
+
+.rightSideContent > article > div {
+    display: grid;
+    grid-template-rows: 22px;
+
+}
+.rightSideContent > article > div > * {
+    margin-top: 10px;
+} 
+
+.rightSideContent > h2:last-of-type{
+    grid-row: 3/4;
+}
+
+.rightSideContent > section {
+    grid-row: 4/5;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rightSideContent  > section > div {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.rightSideContent  > section > div > span {
+    display: grid;
+    grid-template-rows: 25px 1fr;
+}
+
+.icon-cards-container {
+    display: flex;
+    justify-content:flex-end;
+    gap: 30px;
+}
+
 
 .icon-dashboard {
     display: inline-block;
@@ -255,15 +344,25 @@ header > nav:nth-child(2) > div {
 
 .icon-bell {
     display: inline-block;
-     width: 34px; 
-    height: 34px;
+     width: 40px; 
+    height: 40px;
     background-image: url('public/assets/bell-ring-outline.svg');
     background-size: contain;
     background-repeat: no-repeat;
     vertical-align: middle;
 }
 
-.icon-DP {
+.icon-DP-top {
+    display: inline-block;
+    width: 60px; 
+    height: 60px;
+    background-image: url('public/assets/avatar-bad-breaking-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.icon-DP-down {
     display: inline-block;
     width: 90px; 
     height: 90px;
@@ -276,11 +375,89 @@ header > nav:nth-child(2) > div {
 
 .icon-search {
     display: inline-block;
-    width: 30px; 
-    height: 30px;
+    width: 40px; 
+    height: 40px;
     background-image: url('public/assets/search-2-line.svg');
     background-size: contain;
     background-repeat: no-repeat;
     vertical-align: middle;
+}
+
+
+.icon-cards1 {
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    background-image: url('public/assets/eye-plus-outline.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.icon-cards2 {
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    background-image: url('public/assets/star-plus-outline.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.icon-cards3 {
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    background-image: url('public/assets/git-branch-line.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    cursor: pointer;
+    
+}
+
+
+.icon-trending-bar1 {
+    display: inline-block;
+    width: 60px; 
+    height: 60px;
+    background-image: url('public/assets/avatar-einstein-professor-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.icon-trending-bar2 {
+    display: inline-block;
+    width: 60px; 
+    height: 60px;
+    background-image: url('public/assets/avatar-joker-squad-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.icon-trending-bar3 {
+    display: inline-block;
+    width: 60px; 
+    height: 60px;
+    background-image: url('public/assets/avatar-batman-comics-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.icon-trending-bar4 {
+    display: inline-block;
+    width: 60px; 
+    height: 60px;
+    background-image: url('public/assets/avatar-person-pilot-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
