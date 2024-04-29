@@ -1,3 +1,12 @@
+:root {
+    --background-color: #e7eaff;
+    --cards-color: #f3f3f3;
+    --header-color: #c0cdff;;
+    --sidebar-color: #ffee82;
+    --card-border-left-color: #FF0266;
+    --header-btn-color: #1F51FF;
+}
+
 @font-face {
     font-family: 'poppins';
     src: url(public/fonts/Poppins-Regular.ttf);
@@ -20,7 +29,7 @@
 
 body {
     margin: 0;
-    background-color: #e7eaff;
+    background-color: var(--background-color);
     display: grid;
     grid-template-columns: 1fr 4fr; 
     grid-template-rows: 1fr 4fr;
@@ -31,7 +40,7 @@ body {
 .sidebar {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
-    background: #ffee82;
+    background: var(--sidebar-color);
     font-size: 1.5rem;
     font-weight: 700;
     padding: 30px;
@@ -84,9 +93,9 @@ body {
 }
 
 .mainContent > section > article {
-    background-color: #f3f3f3;
+    background-color: var(--cards-color);
     border-radius: 8px;
-    border-left: 10px solid #FF0266;
+    border-left: 10px solid var(--card-border-left-color, black);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     padding: 20px;
     display: grid;
@@ -99,7 +108,7 @@ body {
 
 
 .header {
-    background-color:#c0cdff;
+    background-color: var( --header-color);
     grid-column: 2 / -1 ;
     margin: 0px;
     padding: 0px 30px 0px 30px;
@@ -111,7 +120,7 @@ body {
     width: 700px;
     border-radius: 20px;
     border: none;
-    background-color: #e7eaff;;
+    background-color: var(--background-color);
     padding: 20px;
     box-sizing: border-box;
     font-size: 1.5rem;
@@ -181,7 +190,7 @@ header > nav:nth-child(2) > div > span > h1 {
 }
 
 .header-btn button {
-    background-color: #1F51FF;
+    background-color: var(--header-btn-color);
     color: #f4f3f3;
     border-radius: 53px;
     font-weight: 600;
@@ -208,7 +217,7 @@ header > nav:nth-child(2) > div > span > h1 {
 
 .rightSideContent > article {
     grid-row: 2/3;
-    background-color: #f3f3f3;
+    background-color: var(--cards-color);
     border-radius: 8px;
     padding: 10px 30px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -237,7 +246,7 @@ header > nav:nth-child(2) > div > span > h1 {
 
 .rightSideContent > section {
     grid-row: 4/5;
-    background-color: #f3f3f3;
+    background-color: var(--cards-color);
     border-radius: 8px;
     padding: 18px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
